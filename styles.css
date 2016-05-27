@@ -1,0 +1,43 @@
+html {
+  background: url(background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  position: relative;
+}
+h1, h2 {
+  top: 0;
+  left: 1em;
+  position: fixed;
+  text-shadow: 6px 6px 24px black;
+  font-size: 3em;
+  font-weight: bolder;
+  color: white;
+}
+h2{
+  top: 2em;
+  left: 4em;
+}
+ul {
+  width: 65%;
+  top: 14em;
+  margin: 14em auto 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  background-color: #e0dddd;
+  opacity: 0.8;
+}
+
+li {
+  margin-left: 1em;
+}
+
+#credits {
+  text-align: center;
+  background-color: #ccc;
+  opacity: 0.75;
+}
