@@ -7,6 +7,7 @@ html {
 }
 body {
   position: relative;
+  margin: 0;
 }
 h1, h2 {
   top: 0;
@@ -21,23 +22,47 @@ h2{
   top: 2em;
   left: 4em;
 }
-ul {
+p {
+  padding: 0;
+  margin: 0;
+}
+
+
+#container {
   width: 65%;
   top: 14em;
-  margin: 14em auto 1em;
-  padding: 1em;
+  margin: 14em auto 4em;
+  padding: 1em 1em 0 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
   background-color: #e0dddd;
   opacity: 0.8;
+  max-height: 40%;
+  overflow: scroll;
 }
-
+#container p {
+  font-size: small;
+  text-align: center;
+}
+ul {
+  padding: 0 1em 0.1em;
+  margin: 0;
+}
 li {
-  margin-left: 1em;
+  padding-bottom: 0.25em;
 }
-
 #credits {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   text-align: center;
   background-color: #ccc;
   opacity: 0.75;
+  height: 4em;
+  font-size: small;
 }
+
+.floaty-mc-floatface {
+  float: right;
+}
+
