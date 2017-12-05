@@ -1,20 +1,34 @@
-$( document ).ready(function() {
+// https://css-tricks.com/snippets/jquery/shuffle-dom-elements/
+(function($){
+    $.fn.shuffle = function() {
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
 
-  // shuffle the list
-  $('ul').each(function() {
-    var list  = $(this);
-    var items = list.children();
-    var count = items.length;
+        this.each(function(i){
+            $(this).replaceWith($(shuffled[i]));
+        });
 
-    // How many items we want in the final list
-    var size  = (window.location.search == '?full') ? count : 5;
-
-    list.empty();
-
-    for (i = 0; i < size; i++) {
-      list.append(items.splice(Math.floor(Math.random() * count), 1)[0]);
+        return $(shuffled);
     };
+})(jQuery);
 
-  });
+function shuffle() {
+  $('li').shuffle();
+}
 
+function showAll() {
+  $('li').addClass('visible');
+  $('.tools').hide();
+}
+
+$( document ).ready(function() {
+  shuffle();
 });
