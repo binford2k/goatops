@@ -1,5 +1,5 @@
 # goatops
-This is the source for goatops.com
+This is the source for [goatops.com](https://www.goatops.com)
 
 ## Are you frustrated with bullshit in your IT job?
 
