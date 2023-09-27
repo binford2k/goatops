@@ -19,13 +19,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           paths: |
-            docs/**/*.md:
+            *:
               - I have got the grammar police to proofread my changes.
-            schema/migrations/*.sql:
-              - There are no breaking changes in these migrations
-              - I have notified X team of the new schema changes
-            database/*.go:
-              - <!--Checkmate select=2-->
-              - Strong Consistency
-              - Availability
-              - Partition Tolerance
+            index.html:
+              - I have double checked the indentation.
